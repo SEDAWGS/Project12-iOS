@@ -28,6 +28,7 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sign Up"
+        
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
         self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissMode.Interactive
     }
