@@ -31,19 +31,23 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         searchBar.delegate = self
         var searchDisplayController = UISearchDisplayController(searchBar: searchBar, contentsController: self)
         self.navigationItem.titleView = searchBar
-        self.navigationController.toolbar.barTintColor = UIColor.redColor()
+        self.navigationController.toolbar.tintColor = UIColor.blackColor()
         var buttonArray = NSMutableArray()
         var barButtonLogIn = UIBarButtonItem(title: "Log In", style: UIBarButtonItemStyle.Plain, target: self, action: "logIn")
         var barButtonSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: self, action: nil)
-        var barButtonSignUp = UIBarButtonItem(title: "Log In", style: UIBarButtonItemStyle.Plain, target: self, action: "signIn")
+        var barButtonSignUp = UIBarButtonItem(title: "Log In", style: UIBarButtonItemStyle.Plain, target: self, action: "signUp")
         barButtonSignUp.title = "Sign Up"
         buttonArray.addObject(barButtonLogIn)
         buttonArray.addObject(barButtonSpace)
         buttonArray.addObject(barButtonSignUp)
-        self.navigationController.toolbar.setItems(buttonArray, animated: true)
+        self.setToolbarItems(buttonArray, animated: true)
         self.navigationController.setToolbarHidden(false, animated: false)
 
         
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        self.navigationController.setToolbarHidden(false, animated: false)
     }
     
     func logIn() -> (){
@@ -52,7 +56,8 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     }
     
     func signUp() -> (){
-        
+        var signUp = SLSignUpViewController(style: UITableViewStyle.Grouped)
+        self.navigationController.pushViewController(signUp, animated: true)
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView!) -> Int {
