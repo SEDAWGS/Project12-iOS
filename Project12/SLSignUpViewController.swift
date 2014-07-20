@@ -8,18 +8,25 @@
 
 import Foundation
 
-class SLSignUpViewController: UITableViewController  {
+class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
+    
+    var username = ""
+    var password = ""
+    var email = ""
+    var fullname = ""
     
     enum SLSignUpSection: Int {
-        case username = 0
-        case password
+        case name
         case email
+        case password
         case signUp
         case count
+        case username
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Sign Up"
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
     }
     
@@ -41,8 +48,13 @@ class SLSignUpViewController: UITableViewController  {
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
         var cell:SLTextFieldCell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as SLTextFieldCell
         
+        cell.textField.tag = indexPath!.section
+        cell.textField.delegate = self
+        
         if indexPath?.section == SLSignUpSection.username.toRaw(){
             cell.textField.placeholder = "Username"
+        } else if indexPath?.section == SLSignUpSection.name.toRaw(){
+            cell.textField.placeholder = "Full Name"
         } else if indexPath?.section == SLSignUpSection.password.toRaw(){
             cell.textField.placeholder = "Password"
         } else if indexPath?.section == SLSignUpSection.email.toRaw(){
@@ -59,23 +71,50 @@ class SLSignUpViewController: UITableViewController  {
         return cell
     }
     
-    func signUp(username:NSString, password:NSString) -> (){
+    func signUp() -> (){
         var userObject = PFUser()
-        userObject.username = username
-        userObject.email = username
+        userObject.username = email
+        userObject.email = email
         userObject.password = password
+        userObject["fullname"] = fullname
         userObject["sublistArray"] = NSMutableArray()
         userObject["favoritesArray"] = NSMutableArray()
         userObject.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if !error {
-                NSLog("Signed up user <%@>", userObject.username)
+                println("Signed up user <%@>" +  userObject.username)
             } else {
                 let errorString = error.userInfo["error"] as NSString
-                var alertView = UIAlertController(title: "An Error Occured", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
-                self.presentViewController(alertView, animated: true, completion: nil)
+                var alertView = UIAlertView()
+                let alert = UIAlertView()
+                alert.title = "An Error Occured"
+                alert.message = errorString
+                alert.addButtonWithTitle("OK")
+                alert.show()
             }
         }
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        signUp()
+    }
+    
+    func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
+        var text = textField.text + string
+        switch textField.tag {
+            case SLSignUpSection.username.toRaw():
+                username = text
+            case SLSignUpSection.name.toRaw():
+                fullname = text
+            case SLSignUpSection.password.toRaw():
+                password = text
+            case SLSignUpSection.email.toRaw():
+                email = text
+            default:
+                break
+        }
+        return true
     }
 
 }

@@ -25,6 +25,8 @@
 		1FA74AE9197B4CE700C5CD57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */; };
 		1FA74AEE197B673B00C5CD57 /* SLSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */; };
 		1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */; };
+		1FA74AF6197B7C6500C5CD57 /* SLSearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */; };
+		1FA74AF8197B7D4A00C5CD57 /* SLSearchFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project12-Bridging-Header.h"; sourceTree = "<group>"; };
 		1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSignUpViewController.swift; sourceTree = "<group>"; };
 		1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTextFieldCell.swift; sourceTree = "<group>"; };
+		1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSearchFeedViewController.swift; sourceTree = "<group>"; };
+		1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSearchFeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */,
 				1FA74AB4197B4AA500C5CD57 /* AppDelegate.swift */,
 				1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */,
+				1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */,
+				1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */,
 				1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */,
 				1FA74AB6197B4AA500C5CD57 /* ViewController.swift */,
 				1FA74AB8197B4AA500C5CD57 /* Main.storyboard */,
@@ -271,7 +277,9 @@
 			files = (
 				1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */,
 				1FA74AB7197B4AA500C5CD57 /* ViewController.swift in Sources */,
+				1FA74AF8197B7D4A00C5CD57 /* SLSearchFeedCell.swift in Sources */,
 				1FA74AEE197B673B00C5CD57 /* SLSignUpViewController.swift in Sources */,
+				1FA74AF6197B7C6500C5CD57 /* SLSearchFeedViewController.swift in Sources */,
 				1FA74AB5197B4AA500C5CD57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
