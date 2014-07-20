@@ -28,6 +28,7 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
         super.viewDidLoad()
         self.title = "Sign Up"
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
+        self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissMode.Interactive
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,11 +68,26 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
             cell.textLabel.textAlignment = NSTextAlignment.Center
             cell.textField.hidden = true
         }
-        
+
         return cell
     }
     
+    func verifyInfo () -> (Bool){
+        if email.utf16count == 0 || fullname.utf16count == 0 || password.utf16count == 0 {
+            return false
+        }
+        return true
+    }
+    
     func signUp() -> (){
+        if !verifyInfo() {
+            let alert = UIAlertView()
+            alert.title = "An Error Occured"
+            alert.message = "Please verify you have filled all required fields"
+            alert.addButtonWithTitle("OK")
+            alert.show()
+            return
+        }
         var userObject = PFUser()
         userObject.username = email
         userObject.email = email
