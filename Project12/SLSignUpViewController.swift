@@ -12,6 +12,7 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     
     var username = ""
     var password = ""
+    var confirmPassword = ""
     var email = ""
     var fullname = ""
     
@@ -43,6 +44,9 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+        if section == SLSignUpSection.password.toRaw() {
+            return 2
+        }
         return 1
     }
     
@@ -57,23 +61,28 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
         } else if indexPath?.section == SLSignUpSection.name.toRaw(){
             cell.textField.placeholder = "Full Name"
         } else if indexPath?.section == SLSignUpSection.password.toRaw(){
-            cell.textField.placeholder = "Password"
+            if indexPath?.row == 0{
+                cell.textField.placeholder = "Password"
+            } else {
+                cell.textField.placeholder = "Confirm Password"
+                 cell.textField.tag = -1
+            }
         } else if indexPath?.section == SLSignUpSection.email.toRaw(){
             cell.textField.placeholder = "Email Address"
         } else if indexPath?.section == SLSignUpSection.signUp.toRaw(){
             cell.textLabel.text = "Sign Up"
-            cell.contentView.backgroundColor =  UIColor(red: 0.84, green: 0.25, blue: 0.92, alpha: 1)
-            cell.textLabel.backgroundColor = UIColor(red: 0.84, green: 0.25, blue: 0.92, alpha: 1)
+            cell.contentView.backgroundColor =  UIColor(red: 0.12, green: 0.57, blue: 1, alpha: 1)
+            cell.textLabel.backgroundColor = UIColor(red: 0.12, green: 0.57, blue: 1, alpha: 1)
             cell.textLabel.textColor = UIColor.whiteColor()
             cell.textLabel.textAlignment = NSTextAlignment.Center
             cell.textField.hidden = true
         }
-
+        
         return cell
     }
     
     func verifyInfo () -> (Bool){
-        if email.utf16count == 0 || fullname.utf16count == 0 || password.utf16count == 0 {
+        if email.utf16count == 0 || fullname.utf16count == 0 || password.utf16count == 0 || confirmPassword.utf16count == 0 || (password != confirmPassword) {
             return false
         }
         return true
@@ -127,6 +136,8 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
                 password = text
             case SLSignUpSection.email.toRaw():
                 email = text
+            case -1:
+                confirmPassword = text
             default:
                 break
         }
