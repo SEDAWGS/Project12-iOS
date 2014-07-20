@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
+        var viewC = SLSignUpViewController(style: UITableViewStyle.Grouped)
+        self.presentViewController(viewC, animated: true, completion: nil)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

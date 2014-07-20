@@ -17,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("LWsbarkfgcHFuK02rv0zQ3IvMfbCaicxnZN6KvnK", clientKey: "I310eHQChI64TbQz9deK1HQsVQ7SpasJpcXGgAAs")
+        
+        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+        
+        var viewC = SLSignUpViewController(style: UITableViewStyle.Grouped)
+        var nav = UINavigationController(rootViewController: viewC)
+        self.window!.rootViewController = nav
+        
         return true
     }
 

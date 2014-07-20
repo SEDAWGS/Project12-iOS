@@ -23,6 +23,8 @@
 		1FA74AE5197B4CDB00C5CD57 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE4197B4CDB00C5CD57 /* Security.framework */; };
 		1FA74AE7197B4CE100C5CD57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE6197B4CE100C5CD57 /* StoreKit.framework */; };
 		1FA74AE9197B4CE700C5CD57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */; };
+		1FA74AEE197B673B00C5CD57 /* SLSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */; };
+		1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		1FA74AE6197B4CE100C5CD57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project12-Bridging-Header.h"; sourceTree = "<group>"; };
+		1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSignUpViewController.swift; sourceTree = "<group>"; };
+		1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTextFieldCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 			children = (
 				1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */,
 				1FA74AB4197B4AA500C5CD57 /* AppDelegate.swift */,
+				1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */,
+				1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */,
 				1FA74AB6197B4AA500C5CD57 /* ViewController.swift */,
 				1FA74AB8197B4AA500C5CD57 /* Main.storyboard */,
 				1FA74ABB197B4AA500C5CD57 /* Images.xcassets */,
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */,
 				1FA74AB7197B4AA500C5CD57 /* ViewController.swift in Sources */,
+				1FA74AEE197B673B00C5CD57 /* SLSignUpViewController.swift in Sources */,
 				1FA74AB5197B4AA500C5CD57 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
