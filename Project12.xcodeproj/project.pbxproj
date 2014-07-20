@@ -110,12 +110,12 @@
 		1FA74AB1197B4AA500C5CD57 /* Project12 */ = {
 			isa = PBXGroup;
 			children = (
+				1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */,
 				1FA74AB4197B4AA500C5CD57 /* AppDelegate.swift */,
 				1FA74AB6197B4AA500C5CD57 /* ViewController.swift */,
 				1FA74AB8197B4AA500C5CD57 /* Main.storyboard */,
 				1FA74ABB197B4AA500C5CD57 /* Images.xcassets */,
 				1FA74AB2197B4AA500C5CD57 /* Supporting Files */,
-				1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */,
 			);
 			path = Project12;
 			sourceTree = "<group>";
