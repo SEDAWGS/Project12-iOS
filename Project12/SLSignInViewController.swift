@@ -32,6 +32,10 @@ class SLSignInViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
+        if (section == SLSignInSection.signIn.toRaw()) {
+            return 2
+        }
+        
         return 1
     }
     
@@ -45,8 +49,12 @@ class SLSignInViewController: UITableViewController, UITextFieldDelegate {
             cell.textField.placeholder = "Email Address"
         } else if indexPath?.section == SLSignInSection.password.toRaw() {
             cell.textField.placeholder = "Password"
-        } else if indexPath?.section == SLSignInSection.signIn.toRaw(){
-            cell.textLabel.text = "Sign In"
+        } else if indexPath?.section == SLSignInSection.signIn.toRaw() {
+            if indexPath?.row == 0 {
+                cell.textLabel.text = "Sign In"
+            } else if indexPath?.row == 1 {
+                cell.textLabel.text = "Forgot Password"
+            }
             cell.contentView.backgroundColor =  UIColor(red: 0.84, green: 0.25, blue: 0.92, alpha: 1)
             cell.textLabel.backgroundColor = UIColor(red: 0.84, green: 0.25, blue: 0.92, alpha: 1)
             cell.textLabel.textColor = UIColor.whiteColor()
