@@ -8,7 +8,13 @@
 
 import Foundation
 
+protocol SLSignUpViewControllerDelegate {
+    func signUpViewControllerDidCancelSignUp(signUpViewController: SLSignUpViewController)
+}
+
 class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
+    
+    var delegate: SLSignUpViewControllerDelegate?
     
     var username = ""
     var password = ""
@@ -28,13 +34,14 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sign Up"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("signUpCancelled"))
+        
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
         self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissMode.Interactive
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func signUpCancelled() {
+        delegate?.signUpViewControllerDidCancelSignUp(self)
     }
     
     // #pragma mark - Table view data source
