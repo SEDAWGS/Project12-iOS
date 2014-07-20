@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var nav = UINavigationController(rootViewController: viewC)
         nav.hidesBottomBarWhenPushed = false
         self.window!.rootViewController = nav
-        
         return true
     }
 
