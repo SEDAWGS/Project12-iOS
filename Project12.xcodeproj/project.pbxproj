@@ -12,6 +12,17 @@
 		1FA74ABA197B4AA500C5CD57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA74AB8197B4AA500C5CD57 /* Main.storyboard */; };
 		1FA74ABC197B4AA500C5CD57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA74ABB197B4AA500C5CD57 /* Images.xcassets */; };
 		1FA74AC8197B4AA600C5CD57 /* Project12Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AC7197B4AA600C5CD57 /* Project12Tests.swift */; };
+		1FA74AD5197B4C9200C5CD57 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AD4197B4C9200C5CD57 /* Parse.framework */; };
+		1FA74AD7197B4CAA00C5CD57 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AD6197B4CAA00C5CD57 /* AudioToolbox.framework */; };
+		1FA74AD9197B4CBB00C5CD57 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AD8197B4CBB00C5CD57 /* CFNetwork.framework */; };
+		1FA74ADB197B4CC000C5CD57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74ADA197B4CC000C5CD57 /* CoreGraphics.framework */; };
+		1FA74ADD197B4CC500C5CD57 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74ADC197B4CC500C5CD57 /* CoreLocation.framework */; };
+		1FA74ADF197B4CCB00C5CD57 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74ADE197B4CCB00C5CD57 /* libz.dylib */; };
+		1FA74AE1197B4CD200C5CD57 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE0197B4CD200C5CD57 /* MobileCoreServices.framework */; };
+		1FA74AE3197B4CD700C5CD57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE2197B4CD700C5CD57 /* QuartzCore.framework */; };
+		1FA74AE5197B4CDB00C5CD57 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE4197B4CDB00C5CD57 /* Security.framework */; };
+		1FA74AE7197B4CE100C5CD57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE6197B4CE100C5CD57 /* StoreKit.framework */; };
+		1FA74AE9197B4CE700C5CD57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,18 @@
 		1FA74AC1197B4AA600C5CD57 /* Project12Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project12Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA74AC6197B4AA600C5CD57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA74AC7197B4AA600C5CD57 /* Project12Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project12Tests.swift; sourceTree = "<group>"; };
+		1FA74AD4197B4C9200C5CD57 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1FA74AD6197B4CAA00C5CD57 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1FA74AD8197B4CBB00C5CD57 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1FA74ADA197B4CC000C5CD57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1FA74ADC197B4CC500C5CD57 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1FA74ADE197B4CCB00C5CD57 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1FA74AE0197B4CD200C5CD57 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		1FA74AE2197B4CD700C5CD57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1FA74AE4197B4CDB00C5CD57 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1FA74AE6197B4CE100C5CD57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project12-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +64,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA74AE9197B4CE700C5CD57 /* SystemConfiguration.framework in Frameworks */,
+				1FA74AE7197B4CE100C5CD57 /* StoreKit.framework in Frameworks */,
+				1FA74AE5197B4CDB00C5CD57 /* Security.framework in Frameworks */,
+				1FA74AE3197B4CD700C5CD57 /* QuartzCore.framework in Frameworks */,
+				1FA74AE1197B4CD200C5CD57 /* MobileCoreServices.framework in Frameworks */,
+				1FA74ADF197B4CCB00C5CD57 /* libz.dylib in Frameworks */,
+				1FA74ADD197B4CC500C5CD57 /* CoreLocation.framework in Frameworks */,
+				1FA74ADB197B4CC000C5CD57 /* CoreGraphics.framework in Frameworks */,
+				1FA74AD9197B4CBB00C5CD57 /* CFNetwork.framework in Frameworks */,
+				1FA74AD7197B4CAA00C5CD57 /* AudioToolbox.framework in Frameworks */,
+				1FA74AD5197B4C9200C5CD57 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +94,7 @@
 				1FA74AB1197B4AA500C5CD57 /* Project12 */,
 				1FA74AC4197B4AA600C5CD57 /* Project12Tests */,
 				1FA74AB0197B4AA500C5CD57 /* Products */,
+				1FA74AD3197B4C5700C5CD57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +115,7 @@
 				1FA74AB8197B4AA500C5CD57 /* Main.storyboard */,
 				1FA74ABB197B4AA500C5CD57 /* Images.xcassets */,
 				1FA74AB2197B4AA500C5CD57 /* Supporting Files */,
+				1FA74AEA197B4D6700C5CD57 /* Project12-Bridging-Header.h */,
 			);
 			path = Project12;
 			sourceTree = "<group>";
@@ -107,6 +143,25 @@
 				1FA74AC6197B4AA600C5CD57 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FA74AD3197B4C5700C5CD57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FA74AE8197B4CE700C5CD57 /* SystemConfiguration.framework */,
+				1FA74AE6197B4CE100C5CD57 /* StoreKit.framework */,
+				1FA74AE4197B4CDB00C5CD57 /* Security.framework */,
+				1FA74AE2197B4CD700C5CD57 /* QuartzCore.framework */,
+				1FA74AE0197B4CD200C5CD57 /* MobileCoreServices.framework */,
+				1FA74ADE197B4CCB00C5CD57 /* libz.dylib */,
+				1FA74ADC197B4CC500C5CD57 /* CoreLocation.framework */,
+				1FA74ADA197B4CC000C5CD57 /* CoreGraphics.framework */,
+				1FA74AD8197B4CBB00C5CD57 /* CFNetwork.framework */,
+				1FA74AD6197B4CAA00C5CD57 /* AudioToolbox.framework */,
+				1FA74AD4197B4C9200C5CD57 /* Parse.framework */,
+			);
+			name = Frameworks;
+			path = Project12;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +382,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project12",
+				);
 				INFOPLIST_FILE = Project12/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project12/Project12-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -338,9 +401,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Project12",
+				);
 				INFOPLIST_FILE = Project12/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project12/Project12-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -397,6 +467,7 @@
 				1FA74ACD197B4AA600C5CD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FA74ACE197B4AA600C5CD57 /* Build configuration list for PBXNativeTarget "Project12Tests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +476,7 @@
 				1FA74AD0197B4AA600C5CD57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
