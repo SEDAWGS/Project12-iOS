@@ -65,16 +65,24 @@ class SLSignInViewController: UITableViewController, UITextFieldDelegate {
         return cell
     }
     
-    func signIn() -> (){
+    func signIn() -> () {
         PFUser.logInWithUsernameInBackground(email, password: password) {
             (user: PFUser!, error: NSError!) -> Void in
             
         }
     }
     
+    func forgotPassword() -> () {
+        PFUser.requestPasswordResetForEmailInBackground(email)
+    }
+    
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        signIn()
+        if indexPath?.row == 0 {
+            signIn()
+        } else if indexPath?.row == 1 {
+            forgotPassword()
+        }
     }
     
     func textField(textField: UITextField!, shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
