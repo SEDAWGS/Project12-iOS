@@ -33,9 +33,9 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         searchBar = UISearchBar(frame: CGRectMake(0, 0, 320, 64))
         searchBar.delegate = self
         var searchDisplayController = UISearchDisplayController(searchBar: searchBar, contentsController: self)
-        self.navigationItem.titleView = searchBar
         
-        self.navigationController.toolbar.barTintColor = UIColor.blackColor()
+        self.navigationItem.titleView = searchBar
+        self.navigationController.toolbar.tintColor = UIColor.blackColor()
         
         var buttonArray = NSMutableArray()
         var barButtonLogIn = UIBarButtonItem(title: "Log In", style: UIBarButtonItemStyle.Plain, target: self, action: "logIn")
@@ -45,16 +45,6 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         buttonArray.addObject(barButtonSpace)
         buttonArray.addObject(barButtonSignUp)
         self.setToolbarItems(buttonArray, animated: false)
-        self.navigationController.setToolbarHidden(false, animated: false)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController.setToolbarHidden(false, animated: false)
-    }
-
-    override func viewDidAppear(animated: Bool) {
         self.navigationController.setToolbarHidden(false, animated: false)
     }
     
@@ -71,10 +61,12 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     }
     
     func signUpViewControllerDidCancelSignUp(signUpViewController: SLSignUpViewController) {
+        self.navigationController.setToolbarHidden(false, animated: false)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func signInViewControllerDidCancelSignIn(signInViewController: SLSignInViewController)  {
+        self.navigationController.setToolbarHidden(false, animated: false)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

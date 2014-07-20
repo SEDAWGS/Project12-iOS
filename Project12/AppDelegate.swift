@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("LWsbarkfgcHFuK02rv0zQ3IvMfbCaicxnZN6KvnK", clientKey: "I310eHQChI64TbQz9deK1HQsVQ7SpasJpcXGgAAs")
         
         self.window!.backgroundColor = UIColor.whiteColor()
-        self.window!.makeKeyAndVisible()
         
         var flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumInteritemSpacing = 50
@@ -30,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var nav = UINavigationController(rootViewController: viewC)
         nav.hidesBottomBarWhenPushed = false
         self.window!.rootViewController = nav
+        self.window!.makeKeyAndVisible()
         return true
     }
 
