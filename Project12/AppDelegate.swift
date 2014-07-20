@@ -21,10 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         
-        var viewC = SLSignInViewController(style: UITableViewStyle.Grouped)
+        var flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumInteritemSpacing = 50
+        flowLayout.itemSize = CGSizeMake(CGRectGetWidth(UIScreen.mainScreen().bounds) - 40, CGRectGetHeight(UIScreen.mainScreen().bounds) - 64 - 70)
+        flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        var viewC = SLSearchFeedViewController(collectionViewLayout: flowLayout)
         var nav = UINavigationController(rootViewController: viewC)
+        nav.hidesBottomBarWhenPushed = false
         self.window!.rootViewController = nav
-        
         return true
     }
 

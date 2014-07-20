@@ -22,6 +22,8 @@ class SLSignInViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Sign In"
+        self.navigationController.setToolbarHidden(true, animated: false)
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
     }
     
