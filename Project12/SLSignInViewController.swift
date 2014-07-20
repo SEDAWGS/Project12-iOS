@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol SLSignInViewControllerDelegate {
+    func signInViewControllerDidCancelSignIn(signInViewController: SLSignInViewController)
+}
+
 class SLSignInViewController: UITableViewController, UITextFieldDelegate {
+    
+    var delegate: SLSignInViewControllerDelegate?
     
     var email = ""
     var password = ""
@@ -23,8 +29,13 @@ class SLSignInViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sign In"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("signInCancelled"))
         self.navigationController.setToolbarHidden(true, animated: false)
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")
+    }
+    
+    func signInCancelled() {
+        delegate?.signInViewControllerDidCancelSignIn(self)
     }
     
     // #pragma mark - Table view data source
