@@ -34,7 +34,6 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Sign Up"
-        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("signUpCancelled"))
         
         self.tableView.registerClass(SLTextFieldCell.classForCoder(), forCellReuseIdentifier: "Cell")

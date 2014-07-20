@@ -34,7 +34,8 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         searchBar.delegate = self
         var searchDisplayController = UISearchDisplayController(searchBar: searchBar, contentsController: self)
         self.navigationItem.titleView = searchBar
-        self.navigationController.toolbar.barTintColor = UIColor.redColor()
+        
+        self.navigationController.toolbar.barTintColor = UIColor.blackColor()
         
         var buttonArray = NSMutableArray()
         var barButtonLogIn = UIBarButtonItem(title: "Log In", style: UIBarButtonItemStyle.Plain, target: self, action: "logIn")
@@ -50,6 +51,10 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.navigationController.setToolbarHidden(false, animated: false)
+    }
+
+    override func viewDidAppear(animated: Bool) {
         self.navigationController.setToolbarHidden(false, animated: false)
     }
     
@@ -70,7 +75,7 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     }
     
     func signInViewControllerDidCancelSignIn(signInViewController: SLSignInViewController)  {
-        self.dismissViewControllerAnimated(true, completion: nil) 
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView!) -> Int {
