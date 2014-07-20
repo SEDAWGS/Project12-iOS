@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
         
-        var viewC = SLSignUpViewController(style: UITableViewStyle.Grouped)
+        var viewC = SLSignInViewController(style: UITableViewStyle.Grouped)
         var nav = UINavigationController(rootViewController: viewC)
         self.window!.rootViewController = nav
         

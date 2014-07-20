@@ -27,6 +27,7 @@
 		1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */; };
 		1FA74AF6197B7C6500C5CD57 /* SLSearchFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */; };
 		1FA74AF8197B7D4A00C5CD57 /* SLSearchFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */; };
+		70B9194C197B77EC0009DA0D /* SLSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9194B197B77EC0009DA0D /* SLSignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTextFieldCell.swift; sourceTree = "<group>"; };
 		1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSearchFeedViewController.swift; sourceTree = "<group>"; };
 		1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSearchFeedCell.swift; sourceTree = "<group>"; };
+		70B9194B197B77EC0009DA0D /* SLSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				1FA74AED197B673B00C5CD57 /* SLSignUpViewController.swift */,
 				1FA74AF5197B7C6500C5CD57 /* SLSearchFeedViewController.swift */,
 				1FA74AF7197B7D4A00C5CD57 /* SLSearchFeedCell.swift */,
+				70B9194B197B77EC0009DA0D /* SLSignInViewController.swift */,
 				1FA74AF3197B706000C5CD57 /* SLTextFieldCell.swift */,
 				1FA74AB6197B4AA500C5CD57 /* ViewController.swift */,
 				1FA74AB8197B4AA500C5CD57 /* Main.storyboard */,
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA74AF4197B706000C5CD57 /* SLTextFieldCell.swift in Sources */,
+				70B9194C197B77EC0009DA0D /* SLSignInViewController.swift in Sources */,
 				1FA74AB7197B4AA500C5CD57 /* ViewController.swift in Sources */,
 				1FA74AF8197B7D4A00C5CD57 /* SLSearchFeedCell.swift in Sources */,
 				1FA74AEE197B673B00C5CD57 /* SLSignUpViewController.swift in Sources */,
