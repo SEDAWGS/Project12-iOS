@@ -23,7 +23,7 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     var fullname = ""
     
     enum SLSignUpSection: Int {
-        case name
+        case name = 0
         case email
         case password
         case signUp
