@@ -82,7 +82,7 @@ class SLSignUpViewController: UITableViewController, UITextFieldDelegate  {
     }
     
     func verifyInfo () -> (Bool){
-        if email.utf16count == 0 || fullname.utf16count == 0 || password.utf16count == 0 || confirmPassword.utf16count == 0 || (password != confirmPassword) {
+        if countElements(email) == 0 || countElements(fullname) == 0 || countElements(password) == 0 || countElements(confirmPassword) == 0 || (password != confirmPassword) {
             return false
         }
         return true

@@ -12,6 +12,8 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     var currentPage: CGFloat = 0
     var label = UILabel()
     
+    var searchResult = NSMutableArray()
+    
     var textField = UITextField()
     var searchBar = UISearchBar()
 
@@ -42,8 +44,6 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         buttonArray.addObject(barButtonSignUp)
         self.setToolbarItems(buttonArray, animated: true)
         self.navigationController.setToolbarHidden(false, animated: false)
-
-        
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -61,7 +61,7 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
     }
     
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView!) -> Int {
-        return 25
+        return searchResult.count
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar!) {
@@ -76,12 +76,42 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         searchBar.resignFirstResponder()
     }
     
+    func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
+        var query = PFQuery(className:"SLObject")
+        query.whereKey("tags", equalTo: searchBar.text)
+        query.cachePolicy = kPFCachePolicyCacheElseNetwork
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            if !error {
+                self.searchResult.removeAllObjects()
+                NSLog("Successfully retrieved \(objects.count) scores.")
+                var object: PFObject
+                for object in objects {
+                    self.searchResult.addObject(object)
+                    NSLog("%@", object.objectId)
+                }
+                self.collectionView.reloadData()
+            } else {
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo)
+            }
+
+        }
+    }
+    
     override func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
         return 1;
     }
     
     override func collectionView(collectionView: UICollectionView!, cellForItemAtIndexPath indexPath: NSIndexPath!) -> UICollectionViewCell! {
         var cell: SLSearchFeedCell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as SLSearchFeedCell;
+        var object = searchResult.objectAtIndex(indexPath.row) as PFObject
+        object.fetchIfNeededInBackgroundWithBlock {
+            (object: PFObject!, error: NSError!) -> Void in
+//            let address = object["address"] as String!
+//            cell.subletStreet.text = address
+//            println(address)
+        }
         return cell;
     }
 

@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("LWsbarkfgcHFuK02rv0zQ3IvMfbCaicxnZN6KvnK", clientKey: "I310eHQChI64TbQz9deK1HQsVQ7SpasJpcXGgAAs")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        application.registerForRemoteNotificationTypes(UIRemoteNotificationType.Badge | UIRemoteNotificationType.Alert | UIRemoteNotificationType.Sound)
         
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
@@ -53,6 +56,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication!, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+        var currentInstallation = PFInstallation.currentInstallation();
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackground()
+    }
+    
+    func application(application: UIApplication!, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]!) {
+        PFPush.handlePush(userInfo)
     }
 
 

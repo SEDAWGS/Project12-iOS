@@ -50,7 +50,6 @@ class SLSearchFeedCell: UICollectionViewCell {
         profilePhoto.backgroundColor = UIColor.whiteColor()
         profilePhoto.image = UIImage(named: "profile")
         subletStreet.frame = CGRectMake(CGRectGetMaxX(profilePhoto.frame) + 10 , CGRectGetMinY(self.profilePhoto.frame) + 15, CGRectGetWidth(header.frame) - CGRectGetMaxX(profilePhoto.frame) - 20, 20)
-        subletStreet.text = "Waterloo, Ontario"
         subletStreet.font = UIFont(name: "HelveticaNeue-Light", size: 15)
         subletPrice.frame = CGRectMake(CGRectGetMinX(self.contentView.frame) + 5, CGRectGetHeight(self.contentView.frame) / 2 + 20 , 50, 20)
         subletPrice.text = "$700"
