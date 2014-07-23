@@ -91,6 +91,7 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
                     NSLog("%@", object.objectId)
                 }
                 self.collectionView.reloadData()
+                // Use insert item at index path
             } else {
                 // Log details of the failure
                 NSLog("Error: %@ %@", error, error.userInfo)
