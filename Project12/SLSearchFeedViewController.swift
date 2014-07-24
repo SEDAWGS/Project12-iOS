@@ -98,6 +98,7 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
             }
 
         }
+            
     }
     
     override func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
@@ -109,9 +110,10 @@ class SLSearchFeedViewController: UICollectionViewController, UIScrollViewDelega
         var object = searchResult.objectAtIndex(indexPath.row) as PFObject
         object.fetchIfNeededInBackgroundWithBlock {
             (object: PFObject!, error: NSError!) -> Void in
-//            let address = object["address"] as String!
-//            cell.subletStreet.text = address
-//            println(address)
+            let address = object.objectForKey("address") as String
+            cell.subletStreet.text = address
+            let price = object.objectForKey("price") as Int
+            cell.subletPrice.text = "$" + price.bridgeToObjectiveC().stringValue
         }
         return cell;
     }

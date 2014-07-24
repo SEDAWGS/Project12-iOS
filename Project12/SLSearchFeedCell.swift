@@ -48,18 +48,18 @@ class SLSearchFeedCell: UICollectionViewCell {
         profilePhoto.layer.borderWidth = 0.5
         profilePhoto.layer.cornerRadius = profilePhoto.frame.size.height / 2
         profilePhoto.backgroundColor = UIColor.whiteColor()
-        profilePhoto.image = UIImage(named: "profile")
+        profilePhoto.clipsToBounds = true
+        profilePhoto.image = UIImage(named: "hicham08.jpg")
         subletStreet.frame = CGRectMake(CGRectGetMaxX(profilePhoto.frame) + 10 , CGRectGetMinY(self.profilePhoto.frame) + 15, CGRectGetWidth(header.frame) - CGRectGetMaxX(profilePhoto.frame) - 20, 20)
         subletStreet.font = UIFont(name: "HelveticaNeue-Light", size: 15)
         subletPrice.frame = CGRectMake(CGRectGetMinX(self.contentView.frame) + 5, CGRectGetHeight(self.contentView.frame) / 2 + 20 , 50, 20)
-        subletPrice.text = "$700"
-        footer.frame = CGRectMake(CGRectGetMinX(self.contentView.frame), CGRectGetHeight(self.contentView.frame) / 1.5 + 20, CGRectGetWidth(self.contentView.frame),  CGRectGetHeight(self.contentView.frame) - (CGRectGetHeight(self.contentView.frame) / 1.5 + 20))
+        quickInfo.frame = CGRectMake(CGRectGetMinX(footer.frame) + 15, CGRectGetMinY(footer.frame) + 15, CGRectGetWidth(footer.frame) - 30, CGRectGetHeight(footer.frame) - 30)
+        imageHead.frame = CGRectMake(CGRectGetMinX(self.contentView.frame) , CGRectGetMaxY(header.frame) , CGRectGetWidth(contentView.frame) ,  CGRectGetWidth(contentView.frame))
+        imageHead.image = UIImage(named: "kitchen.jpg")
+        footer.frame = CGRectMake(CGRectGetMinX(self.contentView.frame), CGRectGetMaxY(imageHead.frame), CGRectGetWidth(self.contentView.frame),  CGRectGetHeight(self.contentView.frame) - CGRectGetMaxY(imageHead.frame) )
         footer.layer.borderColor = UIColor.blackColor().CGColor
         footer.layer.borderWidth = 0.5
         footer.backgroundColor = UIColor.whiteColor()
-        quickInfo.frame = CGRectMake(CGRectGetMinX(footer.frame) + 15, CGRectGetMinY(footer.frame) + 15, CGRectGetWidth(footer.frame) - 30, CGRectGetHeight(footer.frame) - 30)
-        imageHead.frame = CGRectMake(CGRectGetMinX(self.contentView.frame) , CGRectGetMaxY(header.frame) - 30, CGRectGetWidth(contentView.frame) ,  CGRectGetWidth(contentView.frame))
-        imageHead.backgroundColor = UIColor.redColor()
         
     }
 
